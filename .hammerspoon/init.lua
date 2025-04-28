@@ -25,6 +25,8 @@ hs.hotkey.bind(hyper, "Right", function()
 end)
 
 hs.hotkey.bind(hyper, "h", function() hs.execute("open ~/") end)
+hs.hotkey.bind(hyper, "r", function() hs.reload()end)
+hs.hotkey.bind(hyper, "s", function() hs.speech.new()end)
 
 local hostname = hs.host.localizedName()
 hs.alert.show(hostname)
@@ -32,10 +34,11 @@ hs.alert.show(hostname)
 if hostname == "tech-1" then
   layout = {
     {"taipo", nil, "EB321HQU (1)", {0, 0, 0.4, 1}, nil, nil},
-    {"Gmail", nil, "EB321HQU (1)", {0.5, 0, 0.5, 0.5}, nil, nil},
-    {"Google Calendar", nil, "EB321HQU (1)", {0.5, 0.5, 0.5, 0.5}, nil, nil},
-    {"Google Chrome", nil, "EB321HQU (2)", {0, 0, 0.5, 1}, nil, nil},
-    {"Ghostty", nil, "EB321HQU (2)", {0.5, 0, 0.5, 1}, nil, nil},
+    {"Gmail", nil, "EB321HQU (1)", {0.4, 0, 0.6, 0.5}, nil, nil},
+    {"Google Calendar", nil, "EB321HQU (1)", {0.4, 0.5, 0.6, 0.5}, nil, nil},
+    {"Google Chrome", nil, "EB321HQU (2)", {0, 0, 0.6, 0.5}, nil, nil},
+    {"Gemini", nil, "EB321HQU (2)", {0, 0.5, 0.6, 0.5}, nil, nil},
+    {"Ghostty", nil, "EB321HQU (2)", {0.6, 0, 0.4, 1}, nil, nil},
   }
 elseif hostname == "owen" then
   local screen = hs.screen.mainScreen()
