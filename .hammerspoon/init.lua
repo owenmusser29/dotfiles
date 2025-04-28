@@ -31,7 +31,7 @@ hs.alert.show(hostname)
 
 if hostname == "tech-1" then
   layout = {
-    {"taipo", nil, "EB321HQU (1)", {0, 0, 0.1, 1}, nil, nil},
+    {"taipo", nil, "EB321HQU (1)", {0, 0, 0.4, 1}, nil, nil},
     {"Gmail", nil, "EB321HQU (1)", {0.5, 0, 0.5, 0.5}, nil, nil},
     {"Google Calendar", nil, "EB321HQU (1)", {0.5, 0.5, 0.5, 0.5}, nil, nil},
     {"Google Chrome", nil, "EB321HQU (2)", {0, 0, 0.5, 1}, nil, nil},
@@ -62,6 +62,6 @@ for _,v in pairs (layout) do
   local app = v[1]
   hs.application.launchOrFocus(app)
 end
-hs.timer.doAfter(0.5, function()
+hs.timer.doAfter(1, function()
   hs.layout.apply(layout)
 end)
